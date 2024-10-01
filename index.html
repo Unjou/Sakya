@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Sakya</title>
+</head>
+<body>
+<div class="preload" data-preaload>
+    <div class="circle"></div>
+    <p class="text">Sakya</p>
+  </div>
+</body>
+<body class="bg-gray-900 text-white">
+    <header class="flex justify-between items-center p-5 bg-black">
+        <div class="flex items-center">
+            <img src="logo.png" alt="Logo" class="h-12 md:h-16">
+            <h1 class="text-2xl ml-2">Sakya</h1>
+        </div>
+        <button id="menu-btn" class="md:hidden">
+            <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </header>
+  <section id="hero-slider" class="relative w-full h-screen overflow-hidden">
+  <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-1000" style="background-image: url('./assets/gambar1.jpg');" id="slide1"></div>
+  <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-1000 hidden" style="background-image: url('./assets/gambar2.jpg');" id="slide2"></div>
+  <div class="absolute inset-0 w-full h-full bg-cover bg-center transition-all duration-1000 hidden" style="background-image: url('./assets/gambar3.jpg');" id="slide3"></div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div id="text-container" class="text-center text-white">
+      <h1 class="text-5xl font-bold mb-4">Selamat Datang di Sakya</h1>
+      <p class="text-xl mb-8">Restoran Ayam Khas yang Menggugah Selera</p>
+      <a href="#menu" class="border border-white px-6 py-2 text-white font-semibold hover:bg-white hover:text-black">VIEW OUR MENU</a>
+    </div>
+  </div>
+</section>
+<nav id="sidebar" class="fixed inset-0 bg-gray-800 bg-opacity-90 transform -translate-x-full transition-transform duration-300">
+        <div class="flex justify-between items-center p-5">
+            <h2 class="text-xl">Menu</h2>
+            <button id="close-btn">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+        <ul class="flex flex-col items-center space-y-5 mt-10">
+          <div class="separator"></div>
+            <li><a href="#tentang" class="hover:text-yellow-500">Our Story</a></li>
+          <div class="separator"></div>
+            <li><a href="#menu" class="hover:text-yellow-500">Menu</a></li>
+         <div class="separator"></div>
+            <li><a href="#filosofi" class="hover:text-yellow-500">Filosofi</a></li>
+        <div class="separator"></div>
+        </ul>
+    </nav>
+    <!--Our Story-->
+    <main class="p-5">
+        <section id="tentang-kami" class="my-20 bg-gray-800 p-10 rounded-lg">
+            <h2 class="text-3xl mb-5">Tentang Kami</h2>
+            <p>Sakya adalah restoran yang menghadirkan aneka olahan ayam dengan bumbu khas nusantara. Kami berkomitmen untuk menyajikan hidangan yang tidak hanya lezat, tapi juga berkualitas. Di Sakya, setiap sajian dibuat dengan bahan-bahan segar dan resep yang diracik dengan penuh keahlian, menjadikan setiap gigitan penuh kenangan dan rasa cinta. Tempat yang sempurna untuk berkumpul dan menikmati makanan bersama keluarga dan teman.</p>
+            <div class="border-t border-b my-5"></div>
+        </section>
+
+        <section id="menu" class="my-20 bg-gray-700 p-10 rounded-lg">
+            <h2 class="text-3xl mb-5">Menu</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish1.jpg" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Teriyaki 
+                    <img src="./assets/best-seller.png" alt="icon" class="ml-2 h-6 w-6">
+                    </h3>
+                    <p>Hidangan masakan Jepang yang terdiri dari potongan-potongan ayam. Kemudian, memasaknya dengan saus teriyaki yang rasanya manis dan gurih. </p>
+                </div>
+               
+               <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish2.jpg" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Bakar </h3>
+                    <p>Ayam bakar adalah makanan khas Indonesia yang diolah dengan cara dipanggang di atas bara api. Sebelum dipanggang, ayam biasanya dimarinasi terlebih dahulu dengan bumbu khusus. Proses pemanggangan ini memberikan aroma dan cita rasa yang khas, serta tekstur yang renyah.</p>
+                </div>
+               <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish3.jpg" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Katsu </h3>
+                    <p>Ayam katsu merupakan hidangan yang berasal dari Jepang, yang berupa irisan daging ayam dengan balutan dari tepung roti, sehingga memiliki tekstur yang garing dari luar.</p>
+                </div>
+
+               <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish4.webp" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Pindang Ayam </h3>
+                    <p>Pindang ayam merupakan masakan khas Kota Palembang, Sumatra Selatan. Masakan pindang berbahan daging ayam yang memiliki kombinasi rasa gurih, asam, dan pedas.</p>
+                </div>
+               <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish5.jpg" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Karage </h3>
+                    <p>Karaage sendiri merupakan daging ayam yang dibumbui dengan bahan-bahan pilihan dari Jepang dan memiliki tekstur renyah, di Jepang biasa disebut “KariKari.</p>
+                </div>
+               <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish6.jpeg" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Taliwang </h3>
+                    <p>Ayam Taliwang merupakan salah satu sajian khas Nusantara asal Lombok yang populer dengan rasa gurih dan pedas yang menggigit.</p>
+                </div>
+                <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish7.jpeg" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Nanking </h3>
+                    <p>Ayam Nanking adalah hidangan yang sering ditemukan di menu restoran Chinese food di Indonesia. Hidangan ini terdiri dari filet dada ayam yang digoreng dengan balutan tepung roti dan disajikan dengan saus kental yang gurih manis.</p>
+                </div>
+               <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish8.webp" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Saus Keju </h3>
+                    <p>Ayam goreng saus keju merupakan salah satu olahan masakan yang terbuat dari daging ayam yang digoreng menggunakan tepung terigu hingga kering. Masakan ini sekilas memang mirip seperti membuat ayam goreng ala kentucky, namun yang membedakannya yaitu ayam goreng ini dilumuri dengan saus keju yang akan membuatnya menjadi lebih gurih dan nikmat.</p>
+                </div>
+                <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish9.JPG" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Nanban </h3>
+                    <p>Chicken nanban adalah makanan khas Jepang yang memadukan ayam goreng krispi di luar, tapi lembut di dalam dengan saus nanban yang manis, asam, dan gurih. Ada pula saus tartar yang lembut dan creamy.</p>
+                </div>
+                <div class="menu-item bg-gray-800 p-5 rounded-lg hover:shadow-lg transition hidden">
+                    <img src="./assets/dish10.jpeg" alt="Menu Item" class="h-48 w-full object-cover rounded-t-lg">
+                    <h3 class="text-xl mt-3 font-bold text-center">Ayam Mentega </h3>
+                    <p>Ayam goreng mentega adalah olahan dari ayam. Di goreng ke dalam wajan dibumbui dengan mentega dan kecap manis. Sehingga menghasilkan aroma dan rasa yang khas gurih dan lezat.</p>
+                </div>
+            </div>
+            <button id="viewAllMenuBtn" class="mt-5 bg-yellow-500 px-4 py-2 rounded">Lihat Semua Menu</button>
+            <div class="border-t border-b my-5"></div>
+        </section>
+
+        <section id="filosofi" class="my-20 bg-gray-600 p-10 rounded-lg">
+            <h2 class="text-3xl mb-5" >Latar Belakang</h2>
+            <p>Kenapa sih usaha yang kami pilih tu Restoran Ayam?
+             Karena salah satu yang kita butuhkan sehari-hari yaitu makanan banyak orang yang tidak sempat masak atau tidak mau ribet masak, dan kenapa kamu memilih olahan makanan berbahan ayam yaitu karena ayam ini kaya akan Protein, Lemak, Vitamin, dll yg mana kandungan tersebut diperlukan oleh tubuh kita untuk beraktivitas setiap hari. Salah satu keunggulan lain kenapa anda harus mencoba restoran kami adalah kami selalu menjaga dan memperhatikan kualitas dari bahan-bahan yang kami gunakan seperti sayuran , ayam , dan bahan-bahan lain seperti perbumbuan.
+             
+              Kenapa sih logo yang kami pakai terlihat simpel dan biasa aja?
+              Jadi jawabnya yaitu karena kami ingin agar orang-orang dapat mengingat logo tersebut mulai dari gambar maupun slogan/jargon, ya jadi intinya mempermudah proses Branding restoran kam.</p>
+            <div class="border-t border-b my-5"></div>
+        </section><section id="our-strength" class="my-20 bg-black-600 p-10 rounded-lg">
+    <h2 class="text-3xl mb-5 text-center font-italic">Our Strength</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="border border-gray-600 p-6 rounded-lg flex flex-col items-center text-center transition hover:shadow-lg hover:border-white duration-300">
+            <img src="./assets/features-icon-1.png" alt="Hygienic Food" class="h-16 w-16 mb-3">
+            <h3 class="text-xl md:text-2xl font-semibold">Kebersihan & Kualitas</h3>
+            <div class="w-16 h-1 bg-white my-3"></div>
+            <p class="text-sm md:text-base">Kami Sangat mengutamakan kebersihan bahan-bahan dengan proses pembersihan yang dilalukan lebih dari 2 kali untuk memastikan bahan yang kami pakai berkualitas dan tetap terjaga kebersihan dan kesegarannya.</p>
+        </div>
+        <div class="border border-gray-600 p-6 rounded-lg flex flex-col items-center text-center transition hover:shadow-lg hover:border-white duration-300">
+            <img src="./assets/features-icon-2.png" alt="Fresh Environment" class="h-16 w-16 mb-3">
+            <h3 class="text-xl md:text-2xl font-semibold">Lingkungan & Suasana</h3>
+            <div class="w-16 h-1 bg-white my-3"></div>
+            <p class="text-sm md:text-base">Kami juga tentu memperhatikan lingkungan dan suasana di restoran kami, ini juga merupakan tantangan bagi kami karena kami ingin mengupayakan suana dan lingkungan yang nyaman bagi pelanggan dan tentunya dapat mengikuti tren saat ini dan tidak hanya mengikuti perkembangan tren tapi juga menciptakan kenyamanan bagi pelanggan.
+            </p>
+        </div>
+        <div class="border border-gray-600 p-6 rounded-lg flex flex-col items-center text-center transition hover:shadow-lg hover:border-white duration-300">
+            <img src="./assets/features-icon-3.png" alt="Skilled Chefs" class="h-16 w-16 mb-3">
+            <h3 class="text-xl md:text-2xl font-semibold">Skilled Chefs</h3>
+            <div class="w-16 h-1 bg-white my-3"></div>
+            <p class="text-sm md:text-base">Lorem ipsum is simply dummy printing and typesetting.</p>
+        </div>
+        <div class="border border-gray-600 p-6 rounded-lg flex flex-col items-center text-center transition hover:shadow-lg hover:border-white duration-300">
+            <img src="./assets/features-icon-4.png" alt="Event & Party" class="h-16 w-16 mb-3">
+            <h3 class="text-xl md:text-2xl font-semibold">Acara & Pesta</h3>
+            <div class="w-16 h-1 bg-white my-3"></div>
+            <p class="text-sm md:text-base">Restoran kami sangat cocok untuk anda yang ingin mengadakan acara kumpul bersama ataupun pesta bersama keluarga ataupun teman.</p>
+        </div>
+    </div>
+</section>
+        <footer class="bg-black p-5 text-center">
+            <p>Alamat: Jl. Contoh No. 123, Kota, Negara</p>
+            <p>Jam Buka: Setiap Hari 09:00 - 21:00</p>
+        </footer>
+    </main>
+    <button id="scrollTopBtn" class="fixed bottom-5 right-5 bg-yellow-500 p-3 rounded-full hidden">↑</button>
+    <script src="script.js"></script>
+</body>
+</html>
