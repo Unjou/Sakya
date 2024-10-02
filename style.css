@@ -106,87 +106,186 @@
     width: calc(50% - 20px);
     margin-inline: auto;
   }
-  /* Global Reset */
+  
 * {
-    box-sizing: border-box; /* Memastikan padding dan border tidak mengubah ukuran elemen */
-    margin: 0; /* Hapus margin global */
-    padding: 0; /* Hapus padding global */
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
 }
 
 .section {
-    width: 100vw; /* Memastikan section penuh lebar layar */
+    width: 100vw; 
     background-color: var(--smoky-black-3);
-    background-size: cover; /* Memastikan background mengisi seluruh elemen */
-    background-position: center; /* Pusatkan background */
+    background-size: cover; 
+    background-position: center; 
 }
 
 .container {
-    width: 100%; /* Mengisi lebar container */
-    max-width: 1200px; /* Atur lebar maksimum */
-    margin: 0 auto; /* Pusatkan container */
-    padding: 20px; /* Tambahkan padding agar tidak terlalu rapat */
+    width: 100%; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 20px;
 }
 
 .features .section-title {
-    margin-block-end: 40px; /* Margin untuk judul */
+    margin-block-end: 40px; 
 }
 
 .feature-card {
-    padding: 20px; /* Padding untuk kartu fitur */
+    padding: 20px; 
     display: flex;
     flex-direction: column;
-    align-items: center; /* Pusatkan isi kartu */
-    background-color: var(--eerie-black-3); /* Warna latar belakang */
-    transition: background-color 0.3s ease; /* Efek transisi */
-    text-align: center; /* Pusatkan teks */
-    width: 100%; /* Kartu fitur mengisi 100% lebar */
+    align-items: center; 
+    background-color: var(--eerie-black-3); 
+    transition: background-color 0.3s ease; 
+    text-align: center; 
+    width: 100%;
 }
 
 .feature-item {
     display: flex;
-    justify-content: center; /* Pusatkan item */
-    margin-bottom: 20px; /* Margin bawah antar item */
-    width: 100%; /* Pastikan item 100% lebar */
+    justify-content: center; 
+    margin-bottom: 20px; 
+    width: 100%;
 }
 
 .card-icon {
     display: flex;
-    justify-content: center; /* Pusatkan ikon */
-    margin: 0 auto; /* Hapus margin */
+    justify-content: center; 
+    margin: 0 auto; 
 }
 
 .card-icon img {
-    max-width: 100px; /* Ukuran maksimal ikon */
-    height: auto; /* Mengatur tinggi otomatis */
+    max-width: 100px; 
+    height: auto; 
 }
 
 .card-title,
 .card-text {
-    color: #FFFFFF; /* Warna teks */
+    color: #FFFFFF;
 }
 
 .feature-card:hover {
-    background-color: #1E3A8A; /* Warna saat hover */
+    background-color: #1E3A8A; 
 }
 
 .feature-card:hover .card-title,
 .feature-card:hover .card-text {
-    color: #BBE1FA; /* Warna teks saat hover */
+    color: #BBE1FA; 
 }
 
-/* Media Query untuk Mobile */
 @media (max-width: 768px) {
     .feature-card {
-        padding: 15px; /* Padding lebih sedikit di mobile */
+        padding: 15px; 
     }
 
     .card-icon img {
-        width: 80px; /* Ukuran ikon lebih kecil di mobile */
+        width: 80px; 
     }
     
     .feature-item {
-        width: 100%; /* Item memenuhi lebar layar di mobile */
-        margin: 0; /* Hapus margin di mode mobile */
+        width: 100%; 
+        margin: 0; 
     }
 }
 
+    #tentang-kami {
+    background-color: #2d3748;  
+    color: #edf2f7; 
+    padding: 2rem;
+}
+
+#tentang-kami h2 {
+    font-size: 4rem; 
+    font-weight: bold;
+    color: #f7fafc; 
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+#tentang-kami p {
+    font-size: 1.125rem; 
+    line-height: 1.75; 
+    color: #e2e8f0; 
+    text-align: center; 
+}
+
+@media (min-width: 1024px) {
+    #tentang-kami p {
+        font-size: 1.5rem; 
+    }
+}
+
+    #filosofi {
+    background-color: #4a5568; 
+    color: #edf2f7; 
+    padding: 2rem;
+}
+
+#filosofi h2 {
+    font-size: 4rem; 
+    font-weight: bold;
+    color: #f7fafc; 
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+#filosofi p {
+    font-size: 1.125rem; 
+    line-height: 1.75; 
+    color: #e2e8f0; 
+}
+
+@media (min-width: 1024px) {
+    #filosofi p {
+        font-size: 1.5rem; 
+    }
+}
+
+    #promo {
+    background: linear-gradient(90deg, #edf2f7, #e0f7fa, #edf2f7); 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+#promo h2 {
+    letter-spacing: 1px;
+    line-height: 1.2;
+}
+
+.highlighted-discount {
+    font-size: 5rem; 
+    font-family: 'Montserrat', sans-serif; 
+    color: #f73859; 
+}
+
+#promo a {
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+#promo a:hover {
+    background-color: #555;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#filosofi {
+    background-color: #4a5568; 
+    color: #edf2f7; 
+    padding: 2rem;
+}
+
+#filosofi h2 {
+    font-size: 4rem; 
+    font-weight: bold;
+    color: #f7fafc; 
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+#filosofi p {
+    font-size: 1.125rem; 
+    line-height: 1.75; 
+    color: #e2e8f0; 
+}
+    
