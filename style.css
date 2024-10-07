@@ -1,42 +1,36 @@
 :root {
-  
-  
     --gold-crayola: hsl(38, 61%, 73%);
     --smoky-black-3: hsla(0, 3%, 7%, 1);
-    --quick-silver: hsla(0, 0%, 65%, 1);
     --white: hsla(0, 0%, 100%, 1);
-    --eerie-black-3: hsla(180, 2%, 8%, 1);
-    
-    
-    --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%,  transparent 66.66% 75%);
-    
-    --weight-bold: 700;
-    
-    --radius-circle: 50%;
-    
     --transition-1: 250ms ease;
     --transition-2: 500ms ease;
-    
     --section-space: 70px;
-    
     --fontSize-title-2: 2.2rem;
     --fontSize-body-2: 1.6rem;
-    
-    --lineHeight-6: 1.4em;
+    --weight-bold: 700;
+    --eerie-black-3: hsla(180, 2%, 8%, 1);
+    --loading-text-gradient: linear-gradient(90deg, transparent 0% 16.66%, var(--smoky-black-3) 33.33% 50%,  transparent 66.66% 75%);
 }
+
+body {
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png');
+    background-size: cover;
+}
+
 .preload {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: var(--gold-crayola);
-  z-index: 10;
-  display: grid;
-  place-content: center;
-  justify-items: center;
-  transition: var(--transition-2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--gold-crayola);
+    z-index: 10;
+    display: grid;
+    place-content: center;
+    justify-items: center;
+    transition: var(--transition-2);
 }
+
 .preload > * { transition: var(--transition-1); }
 
 .preload.loaded > * { opacity: 0; }
@@ -45,19 +39,17 @@
   transition-delay: 250ms;
   transform: translateY(100%);
 }
+
 .circle {
-  width: 112px;
-  height: 112px;
-  border-radius: var(--radius-circle);
-  border: 3px solid var(--white);
-  border-block-start-color: var(--smoky-black-3);
-  margin-block-end: 45px;
-  animation: rotate360 1s linear infinite;
+    width: 112px;
+    height: 112px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    border-block-start-color: var(--smoky-black-3);
+    margin-block-end: 45px;
+    animation: rotate360 1s linear infinite;
 }
-@keyframes rotate360 {
-  0% { transform: rotate(0); }
-  100% { transform: rotate(1turn); }
-}
+
 .preload .text {
   background-image: var(--loading-text-gradient);
   background-size: 500%;
@@ -73,219 +65,111 @@
   -webkit-text-stroke: 0.5px var(--eerie-black-3);
   animation: loadingText linear 2s infinite;
 }
-@keyframes loadingText {
-  0% { background-position: 100%; }
-  100% { background-position: 0%; }
+
+@keyframes rotate360 {
+    0% { transform: rotate(0); }
+    100% { transform: rotate(1turn); }
 }
 
-.separator {
-  width: 8px;
-  height: 8px;
-  border: 1px solid var(--gold-crayola);
-  transform: rotate(45deg);
-}
-
-
-@media (min-width: 575px) {
-
-  :root {
-
-    --fontSize-body-2: 2rem;
-
-  }
-  
-  @media (min-width: 768px) {
-
-
-  .grid-list { grid-template-columns: 1fr 1fr; }
-
-  :is(.service, .event) .container { max-width: 820px; }
-
-  :is(.service, .event) .grid-list li:last-child {
-    grid-column: 1 / 3;
-    width: calc(50% - 20px);
-    margin-inline: auto;
-  }
-  
-* {
-    box-sizing: border-box; 
-    margin: 0; 
-    padding: 0; 
-}
-
-.section {
-    width: 100vw; 
-    background-color: var(--smoky-black-3);
-    background-size: cover; 
-    background-position: center; 
-}
-
-.container {
-    width: 100%; 
-    max-width: 1200px; 
-    margin: 0 auto; 
-    padding: 20px;
-}
-
-.features .section-title {
-    margin-block-end: 40px; 
-}
-
-.feature-card {
-    padding: 20px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    background-color: var(--eerie-black-3); 
-    transition: background-color 0.3s ease; 
-    text-align: center; 
-    width: 100%;
-}
-
-.feature-item {
-    display: flex;
-    justify-content: center; 
-    margin-bottom: 20px; 
-    width: 100%;
-}
-
-.card-icon {
-    display: flex;
-    justify-content: center; 
-    margin: 0 auto; 
-}
-
-.card-icon img {
-    max-width: 100px; 
-    height: auto; 
-}
-
-.card-title,
-.card-text {
-    color: #FFFFFF;
-}
-
-.feature-card:hover {
-    background-color: #1E3A8A; 
-}
-
-.feature-card:hover .card-title,
-.feature-card:hover .card-text {
-    color: #BBE1FA; 
+#hero-slider .bg-cover {
+    background-size: cover;
+    background-position: center;
 }
 
 @media (max-width: 768px) {
-    .feature-card {
-        padding: 15px; 
-    }
-
-    .card-icon img {
-        width: 80px; 
-    }
-    
-    .feature-item {
-        width: 100%; 
-        margin: 0; 
+    #hero-slider .bg-cover {
+        background-size: contain;
     }
 }
 
-    #tentang-kami {
-    background-color: #2d3748;  
-    color: #edf2f7; 
-    padding: 2rem;
-}
-
-#tentang-kami h2 {
-    font-size: 4rem; 
-    font-weight: bold;
-    color: #f7fafc; 
+section p {
+    font-size: 1.9rem; 
+    line-height: 1.9rem; 
+    color: #e2e8f0;
     text-align: center;
-    margin-bottom: 1.25rem;
-}
-
-#tentang-kami p {
-    font-size: 1.125rem; 
-    line-height: 1.75; 
-    color: #e2e8f0; 
-    text-align: center; 
 }
 
 @media (min-width: 1024px) {
-    #tentang-kami p {
-        font-size: 1.5rem; 
+    section p {
+        font-size: 2.5rem; 
+        line-height: 2.3rem;
     }
 }
 
-    #filosofi {
-    background-color: #4a5568; 
-    color: #edf2f7; 
-    padding: 2rem;
+@media (min-width: 1280px) {
+    section p {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
 }
 
-#filosofi h2 {
-    font-size: 4rem; 
-    font-weight: bold;
-    color: #f7fafc; 
+h2 {
+    font-size: 3rem; 
     text-align: center;
-    margin-bottom: 1.25rem;
-}
-
-#filosofi p {
-    font-size: 1.125rem; 
-    line-height: 1.75; 
-    color: #e2e8f0; 
 }
 
 @media (min-width: 1024px) {
-    #filosofi p {
-        font-size: 1.5rem; 
+    h2 {
+        font-size: 4.5rem; 
     }
 }
 
-    #promo {
-    background: linear-gradient(90deg, #edf2f7, #e0f7fa, #edf2f7); 
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1); 
-}
 
-#promo h2 {
-    letter-spacing: 1px;
-    line-height: 1.2;
-}
-
-.highlighted-discount {
-    font-size: 5rem; 
-    font-family: 'Montserrat', sans-serif; 
-    color: #f73859; 
-}
-
-#promo a {
-    background-color: #333;
-    transition: background-color 0.3s ease;
-}
-
-#promo a:hover {
-    background-color: #555;
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-#filosofi {
-    background-color: #4a5568; 
-    color: #edf2f7; 
-    padding: 2rem;
-}
-
-#filosofi h2 {
-    font-size: 4rem; 
-    font-weight: bold;
-    color: #f7fafc; 
+footer p {
+    font-size: 1.2rem;
+    color: #e2e8f0;
     text-align: center;
-    margin-bottom: 1.25rem;
 }
 
-#filosofi p {
-    font-size: 1.125rem; 
-    line-height: 1.75; 
-    color: #e2e8f0; 
+@media (min-width: 1024px) {
+    footer p {
+        font-size: 1.75rem; 
+        line-height: 2.2rem;
+    }
 }
-    
+
+@media (min-width: 1280px) {
+    footer p {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    #our-strength p {
+        font-size: 1.75rem; 
+        line-height: 2.25rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    #our-strength p {
+        font-size: 2rem; 
+        line-height: 2.5rem;
+    }
+}
+
+#sidebar {
+    width: 300px;
+    background-color: rgba(31, 31, 31, 0.9); 
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 9999;
+    transition: transform 0.3s ease;
+    padding-top: 2rem;
+}
+
+#sidebar.sidebar-open {
+    transform: translateX(0); 
+}
+
+#sidebar.sidebar-closed {
+    transform: translateX(-100%); 
+}
+
+#menu-btn, #close-btn {
+    cursor: pointer;
+}
